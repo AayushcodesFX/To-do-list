@@ -6,14 +6,14 @@ const addTask = () => {
 
     if(text){
         tasks.push({text: text, completed: false});
-
+        taskInput.value = "";
         updateTasksList();
     }
 };
 
 const updateTasksList = () => {
     const taskList = document.getElementById('task-list')
-    taskList.innerHTML = "";
+    taskList.innerHTML = '';
 
     tasks.foreach (task => {
         const listItem = document.createElement('li')
